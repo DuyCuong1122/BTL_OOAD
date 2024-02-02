@@ -22,8 +22,39 @@ public class InforController {
         return infoModel.getTen();
     }
 
+    public String thongTinYTe()
+    {
+        return infoModel.getThongTinYTe();
+    }
+
+    public void set_thongTinYTe(String thongTinYTe)
+    {
+        infoModel.setThongTinYTe(thongTinYTe);
+    }
+
     public String ngaySinh() {
         return infoModel.getNgaySinh();
+    }
+
+    public String canNang()
+    {
+        return infoModel.getCanNang();
+    }
+
+    public String chieuCao()
+    {
+        
+        return infoModel.getChieuCao();
+    }
+
+    public void set_chieuCao(String chieuCao)
+    {
+        infoModel.setChieuCao(chieuCao);
+    }
+
+    public void set_canNang(String canNang)
+    {
+        infoModel.setCanNang(canNang);
     }
 
     public String sdt() {
@@ -83,14 +114,6 @@ public class InforController {
     }
 
     public void showChangeInfo() {
-        System.out.println(InforController.getInstance().name());
-		System.out.println(InforController.getInstance().sdt());
-		System.out.println(InforController.getInstance().ngaySinh());
-		System.out.println(InforController.getInstance().nhomMau());
-		System.out.println(InforController.getInstance().diaChi());
-		System.out.println(InforController.getInstance().CCCD());
-		System.out.println(InforController.getInstance().ngheNghiep());
-		System.out.println(InforController.getInstance().noiCongTac());
         HomepageController.getInstance().showChangeInfoPage();
         System.out.println("Data from Model: Change Infomation ");
     }

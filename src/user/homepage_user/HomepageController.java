@@ -59,6 +59,7 @@ public class HomepageController {
 
     public void showInfoPage() {
         rootFrame.getContentPane().removeAll();
+        infoView = new InforView();
         rootFrame.add(infoView);
         System.out.println("Data from Model: Info page ");
         rootFrame.revalidate();
