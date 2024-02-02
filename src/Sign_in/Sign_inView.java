@@ -67,6 +67,7 @@ setLayout(null);
 				role = Sign_inController.getRole();
 				id = Sign_inController.getID();
 				if (validAcc == 1 && role.equals("volunteer")){
+					HomepageController.getInstance().setID(id);
 					HomepageController.getInstance().showHomepage();
 				}
 				else {

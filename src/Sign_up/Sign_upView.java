@@ -2,9 +2,7 @@ package Sign_up;
 
 import javax.swing.*;
 
-import Database.Database;
 import homepage_user.HomepageController;
-import User.User;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
