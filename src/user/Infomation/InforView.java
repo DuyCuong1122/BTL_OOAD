@@ -13,7 +13,6 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import javax.swing.JButton;
-import javax.swing.SwingConstants;
 import javax.swing.JTextArea;
 
 public class InforView extends JPanel {
@@ -203,13 +202,13 @@ public class InforView extends JPanel {
 	}
 
 	public void thongTinYTe() {
-		float x = Float.valueOf(InforController.getInstance().canNang())/ Float.valueOf(InforController.getInstance().chieuCao()) / Float.valueOf(InforController.getInstance().chieuCao());
+		float BMI = Float.valueOf(InforController.getInstance().canNang())/ Float.valueOf(InforController.getInstance().chieuCao()) / Float.valueOf(InforController.getInstance().chieuCao());
 		JLabel lblNewLabel_1_5_1 = new JLabel("Thông tin y tế");
 		lblNewLabel_1_5_1.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		lblNewLabel_1_5_1.setBounds(400, 504, 150, 29);
 		add(lblNewLabel_1_5_1);
 
-		JTextArea tA_thongTinYTe = new JTextArea(InforController.getInstance().thongTinYTe() + "\nBMI: "+ String.valueOf(x));
+		JTextArea tA_thongTinYTe = new JTextArea(InforController.getInstance().thongTinYTe() + "\nBMI: "+ String.valueOf(BMI));
 		tA_thongTinYTe.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		tA_thongTinYTe.setLineWrap(true);
 		tA_thongTinYTe.setEditable(false);

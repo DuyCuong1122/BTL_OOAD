@@ -58,7 +58,16 @@ public class Info_eventView extends JPanel {
 			@Override
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				System.out.println("Button 'Tham gia' clicked");
-				JOptionPane.showMessageDialog(null, "Đăng ký tham gia sự kiện thành công");
+				int choice = JOptionPane.showOptionDialog(null, "Tham gia hiến máu", "Chọn lượng máu hiến:",
+						JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,
+						new Object[] { "200cc", "300cc" }, "200cc");
+						if (choice == JOptionPane.YES_OPTION) {
+							// Người dùng chọn "Có"
+							JOptionPane.showMessageDialog(null, "Chọn hiến 200cc máu thành công!");
+						} else {
+							// Người dùng chọn "Không" hoặc đóng cửa sổ
+							JOptionPane.showMessageDialog(null, "Chọn hiến 300cc máu thành công!");
+						}
 			}
 		});
 	}
