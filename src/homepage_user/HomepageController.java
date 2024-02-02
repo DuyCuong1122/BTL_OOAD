@@ -4,8 +4,12 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 import Change_Information.Change_infoView;
+import Event.EventView;
+import Info_event.Info_eventView;
 import Infomation.InforView;
 import helpPage.HelpView;
+import Sign_in.Sign_inView;
+import Sign_up.Sign_upView;
 
 public class HomepageController {
     private static HomepageController instance;
@@ -15,7 +19,11 @@ public class HomepageController {
     private HomepageView homePageView;
     private InforView infoView;
     private Change_infoView changeInfoView;
-
+    private Sign_inView sign_inView;
+    private Sign_upView sign_upView;
+    private EventView eventView;
+    private Info_eventView infoEventView;
+    private String id;
     private HomepageController() {
         homePageModel = new HomepageModel();
         rootFrame = new JFrame();
@@ -26,7 +34,11 @@ public class HomepageController {
         helpView = new HelpView();
         infoView = new InforView();
         changeInfoView = new Change_infoView();
-        rootFrame.add(homePageView);
+        eventView = new EventView();
+        infoEventView = new Info_eventView();
+        sign_inView = new Sign_inView();
+        sign_upView = new Sign_upView();
+        rootFrame.add(sign_inView);
     }
 
     public static HomepageController getInstance() {
@@ -36,6 +48,9 @@ public class HomepageController {
         return instance;
     }
 
+    public void setID(String id){
+        this.id = id;
+    }
     public void showHomepage() {
         rootFrame.getContentPane().removeAll();
         rootFrame.add(homePageView);
@@ -68,6 +83,39 @@ public class HomepageController {
         rootFrame.repaint();
     }
 
+    public void showSignUpView(){
+        rootFrame.getContentPane().removeAll();
+        rootFrame.add(sign_upView);
+        System.out.println("Data from Model: Sign up page ");
+        rootFrame.revalidate();
+        rootFrame.repaint();
+    }
+
+    public void showSignInView(){
+        rootFrame.getContentPane().removeAll();
+        rootFrame.add(sign_inView);
+        System.out.println("Data from Model: Sign up page ");
+        rootFrame.revalidate();
+        rootFrame.repaint();
+    }
+
+    public void showEventPage() {
+        rootFrame.getContentPane().removeAll();
+        rootFrame.add(eventView);
+        System.out.println("Data from Model: Event page ");
+        rootFrame.revalidate();
+        rootFrame.repaint();
+    }
+
+    public void showInfoEventPage(String id_event) {
+        rootFrame.getContentPane().removeAll();
+        Info_eventView infoEventView2 = new Info_eventView(id_event);
+        rootFrame.add(infoEventView2);
+        System.out.println("Data from Model: Info Event page ");
+        rootFrame.revalidate();
+        rootFrame.repaint();
+    }
+
     public void start() {
         rootFrame.setVisible(true);
     }
@@ -75,8 +123,7 @@ public class HomepageController {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
-            public void run() {
-                HomepageController.getInstance().start();
+            public void run() {HomepageController.getInstance().start();
             }
         });
     }

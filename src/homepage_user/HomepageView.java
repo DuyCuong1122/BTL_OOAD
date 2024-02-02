@@ -31,7 +31,7 @@ public class HomepageView extends JPanel {
         btnThongTinCaNhan.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 HomepageController.getInstance().showInfoPage();
-                
+
             }
         });
         btnThongTinCaNhan.setBounds(450, 352, 649, 69);
@@ -40,7 +40,7 @@ public class HomepageView extends JPanel {
         JButton btnThongTinSuKien = new JButton("Thông tin sự kiện");
         btnThongTinSuKien.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // Handle the action for Thong tin su kien button
+                HomepageController.getInstance().showEventPage();
             }
         });
         btnThongTinSuKien.setFont(new Font("Tahoma", Font.PLAIN, 20));

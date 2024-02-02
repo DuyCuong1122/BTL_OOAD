@@ -4,6 +4,7 @@ public class HomepageModel{
     private static HomepageModel instance;
     private String data;
     private String title;
+    private String id;
 
     HomepageModel()
     {
@@ -28,6 +29,16 @@ public class HomepageModel{
     public String getTitle()
     {
         return title;
+    }
+
+    public String getID()
+    {
+        return id;
+    }
+    public void setID(String id)
+    {
+         this.id = id;
+         System.out.println(this.id);
     }
     
 }

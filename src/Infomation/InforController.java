@@ -4,7 +4,7 @@ import homepage_user.HomepageController;
 
 public class InforController {
     private static InforController instance;
-    private static InforModel infoModel =InforModel.getInstanceModel();;
+    private static InforModel infoModel =InforModel.getInstanceModel();
 
     private InforController() {
     }

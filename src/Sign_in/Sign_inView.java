@@ -1,9 +1,10 @@
 package Sign_in;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import homepage_user.HomepageController;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Sign_inView extends JPanel {
 
@@ -34,7 +35,7 @@ setLayout(null);
 		tf_username.setColumns(10);
 		
 		JLabel lblNewLabel_3 = new JLabel("Password");
-		lblNewLabel_3.setBounds(360, 253, 45, 13);
+		lblNewLabel_3.setBounds(360, 253, 60, 13);
 		add(lblNewLabel_3);
 		
 		tf_password = new JTextField();
@@ -44,12 +45,35 @@ setLayout(null);
 		tf_password.setColumns(10);
 		
 		JButton bt_signIn = new JButton("Đăng nhập");
-		bt_signIn.setBounds(610, 334, 85, 21);
+		bt_signIn.setBounds(610, 334, 150, 21);
 		add(bt_signIn);
 		
 		JButton bt_create = new JButton("Tạo tài khoản");
 		bt_create.setBounds(568, 428, 171, 21);
 		add(bt_create);
+		bt_create.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HomepageController.getInstance().showSignUpView();
+			}
+		});
+		bt_signIn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int validAcc = 0;
+				String role;
+				String id;
+				Sign_inController.setUser(tf_username.getText());
+				Sign_inController.setPass(tf_password.getText());
+				validAcc = Sign_inController.checkAcc();
+				role = Sign_inController.getRole();
+				id = Sign_inController.getID();
+				if (validAcc == 1 && role.equals("volunteer")){
+					HomepageController.getInstance().showHomepage();
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Đăng nhập thất bại");
+				}
+			}
+		});
 
 	}
 

@@ -42,7 +42,7 @@ public class InforView extends JPanel {
 	{
 		Image image;
 		try {
-			image = ImageIO.read(new File("F:\\Projects\\Java\\Eclipse\\Bai_tap_lon_OOP\\src\\Images\\logo.jpg"));
+			image = ImageIO.read(new File("C:\\Users\\asus\\Desktop\\BTL_OOAD\\src\\Images\\logo.jpg"));
 			Image icon = image.getScaledInstance(50, 50, Image.SCALE_DEFAULT); // scale it the smooth way
 			JLabel label = new JLabel(new ImageIcon(icon));
 			label.setBounds(1400, 16, 50, 50);
