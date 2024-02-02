@@ -82,7 +82,7 @@ public class Change_infoView extends JPanel {
 		lblNewLabel_1.setBounds(400, 100, 108, 29);
 		add(lblNewLabel_1);
 
-		tf_name = new JTextField(InforController.name());
+		tf_name = new JTextField(InforController.getInstance().name());
 		tf_name.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		tf_name.setBounds(800, 100, 400, 29);
 		add(tf_name);
@@ -94,7 +94,7 @@ public class Change_infoView extends JPanel {
 		lblNewLabel_1_1.setBounds(400, 150, 108, 29);
 		add(lblNewLabel_1_1);
 
-		tf_ngaySinh = new JTextField(InforController.ngaySinh());
+		tf_ngaySinh = new JTextField(InforController.getInstance().ngaySinh());
 		tf_ngaySinh.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		tf_ngaySinh.setBounds(800, 150, 400, 29);
 		add(tf_ngaySinh);
@@ -107,7 +107,7 @@ public class Change_infoView extends JPanel {
 		lblNewLabel_1_2.setBounds(400, 200, 139, 29);
 		add(lblNewLabel_1_2);
 
-		tf_sdt = new JTextField(InforController.sdt());
+		tf_sdt = new JTextField(InforController.getInstance().sdt());
 		tf_sdt.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		tf_sdt.setBounds(800, 200, 400, 29);
 		add(tf_sdt);
@@ -119,7 +119,7 @@ public class Change_infoView extends JPanel {
 		lblNewLabel_1_4.setBounds(400, 250, 166, 29);
 		add(lblNewLabel_1_4);
 
-		tf_diaChi = new JTextField(InforController.diaChi());
+		tf_diaChi = new JTextField(InforController.getInstance().diaChi());
 		tf_diaChi.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		tf_diaChi.setBounds(800, 250, 400, 29);
 		add(tf_diaChi);
@@ -131,7 +131,7 @@ public class Change_infoView extends JPanel {
 		lblNewLable11.setBounds(400, 300, 249, 29);
 		add(lblNewLable11);
 
-		tf_CCCD = new JTextField(InforController.CCCD());
+		tf_CCCD = new JTextField(InforController.getInstance().CCCD());
 		tf_CCCD.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		tf_CCCD.setBounds(800, 300, 400, 29);
 		add(tf_CCCD);
@@ -143,7 +143,7 @@ public class Change_infoView extends JPanel {
 		lblNewLabel_1_3.setBounds(400, 350, 166, 29);
 		add(lblNewLabel_1_3);
 
-		tf_ngheNghiep = new JTextField(InforController.ngheNghiep());
+		tf_ngheNghiep = new JTextField(InforController.getInstance().ngheNghiep());
 		tf_ngheNghiep.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		tf_ngheNghiep.setBounds(800, 350, 400, 29);
 		add(tf_ngheNghiep);
@@ -157,22 +157,22 @@ public class Change_infoView extends JPanel {
 		add(bt_save);
 		bt_save.addActionListener(new ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				InforController.set_Ten(tf_name.getText());
-				InforController.set_sdt(tf_sdt.getText());
-				InforController.set_ngaySinh(tf_ngaySinh.getText());
-				InforController.set_nhomMau(tf_nhomMau.getText());
-				InforController.set_diaChi(tf_diaChi.getText());
-				InforController.set_CCCD(tf_CCCD.getText());
-				InforController.set_ngheNghiep(tf_ngheNghiep.getText());
-				InforController.set_noiCongTac(tf_noiCongTac.getText());
-				System.out.println(InforController.name());
-				System.out.println(InforController.sdt());
-				System.out.println(InforController.ngaySinh());
-				System.out.println(InforController.nhomMau());
-				System.out.println(InforController.diaChi());
-				System.out.println(InforController.CCCD());
-				System.out.println(InforController.ngheNghiep());
-				System.out.println(InforController.noiCongTac());
+				InforController.getInstance().set_Ten(tf_name.getText());
+				InforController.getInstance().set_sdt(tf_sdt.getText());
+				InforController.getInstance().set_ngaySinh(tf_ngaySinh.getText());
+				InforController.getInstance().set_nhomMau(tf_nhomMau.getText());
+				InforController.getInstance().set_diaChi(tf_diaChi.getText());
+				InforController.getInstance().set_CCCD(tf_CCCD.getText());
+				InforController.getInstance().set_ngheNghiep(tf_ngheNghiep.getText());
+				InforController.getInstance().set_noiCongTac(tf_noiCongTac.getText());
+				System.out.println(InforController.getInstance().name());
+				System.out.println(InforController.getInstance().sdt());
+				System.out.println(InforController.getInstance().ngaySinh());
+				System.out.println(InforController.getInstance().nhomMau());
+				System.out.println(InforController.getInstance().diaChi());
+				System.out.println(InforController.getInstance().CCCD());
+				System.out.println(InforController.getInstance().ngheNghiep());
+				System.out.println(InforController.getInstance().noiCongTac());
 				JOptionPane.showMessageDialog(null, "Lưu thành công");
 			}
 		});
@@ -184,7 +184,7 @@ public class Change_infoView extends JPanel {
 		lblNewLabel_1_5.setBounds(400, 400, 150, 29);
 		add(lblNewLabel_1_5);
 
-		tf_noiCongTac = new JTextField(InforController.noiCongTac());
+		tf_noiCongTac = new JTextField(InforController.getInstance().noiCongTac());
 		tf_noiCongTac.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		tf_noiCongTac.setBounds(800, 400, 400, 29);
 		add(tf_noiCongTac);
@@ -198,7 +198,7 @@ public class Change_infoView extends JPanel {
 		lblNewLabel_1_6.setBounds(400, 450, 150, 29);
 		add(lblNewLabel_1_6);
 
-		tf_nhomMau = new JTextField(InforController.nhomMau());
+		tf_nhomMau = new JTextField(InforController.getInstance().nhomMau());
 		tf_nhomMau.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		tf_nhomMau.setBounds(800, 450, 400, 29);
 		add(tf_nhomMau);

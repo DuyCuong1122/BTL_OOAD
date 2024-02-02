@@ -6,6 +6,7 @@ import user.change_information.Change_infoView;
 import user.event.EventView;
 import user.helpPage.HelpView;
 import user.info_event.Info_eventView;
+import javax.swing.SwingUtilities;
 
 public class HomepageController {
     private static HomepageController instance;
@@ -92,13 +93,13 @@ public class HomepageController {
         rootFrame.setVisible(true);
     }
 
-    // public static void main(String[] args) {
-    //     SwingUtilities.invokeLater(new Runnable() {
-    //         @Override
-    //         public void run() {
-    //             HomepageController.getInstance().start();
-    //         }
-    //     });
-    // }
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                HomepageController.getInstance().start();
+            }
+        });
+    }
 
 }

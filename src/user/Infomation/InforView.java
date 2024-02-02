@@ -20,7 +20,7 @@ public class InforView extends JPanel {
 
 	public InforView() {
 		setLayout(null);
-		
+
 		JLabel lblNewLabel = new JLabel("Thông tin cá nhân");
 		lblNewLabel.setFont(new Font("#9Slide02 Tieu de dai", Font.BOLD, 24));
 		lblNewLabel.setBounds(700, 36, 400, 32);
@@ -36,11 +36,10 @@ public class InforView extends JPanel {
 		noiCongTac();
 		button_return();
 		button_change();
-		nhomMau(); 
+		nhomMau();
 	}
 
-	public void logo()
-	{
+	public void logo() {
 		Image image;
 		try {
 			image = ImageIO.read(new File("F:\\Projects\\Java\\Eclipse\\Bai_tap_lon_OOP\\src\\Images\\logo.jpg"));
@@ -55,8 +54,7 @@ public class InforView extends JPanel {
 
 	}
 
-	public void button_return()
-	{
+	public void button_return() {
 		JButton btn_return = new JButton("Quay lại");
 		btn_return.setFont(new Font("#9Slide01 Tieu de ngan", Font.PLAIN, 18));
 		btn_return.setBounds(82, 46, 122, 25);
@@ -68,16 +66,16 @@ public class InforView extends JPanel {
 		add(btn_return);
 	}
 
-	public void HoVaTen()
-	{
+	public void HoVaTen() {
 		JLabel lblNewLabel_1 = new JLabel("Họ và tên");
 		lblNewLabel_1.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		lblNewLabel_1.setBounds(400, 100, 108, 29);
 		add(lblNewLabel_1);
 
-		JLabel lb_name = new JLabel(InforController.name());
+		
+		JLabel lb_name = new JLabel(InforController.getInstance().name());
 		lb_name.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
-		lb_name.setBounds(800, 100,400, 29);
+		lb_name.setBounds(800, 100, 400, 29);
 		lb_name.setHorizontalAlignment(JLabel.RIGHT);
 		add(lb_name);
 	}
@@ -88,9 +86,9 @@ public class InforView extends JPanel {
 		lblNewLabel_1_1.setBounds(400, 150, 108, 29);
 		add(lblNewLabel_1_1);
 
-		JLabel lb_ngaySinh = new JLabel(InforController.ngaySinh());
+		JLabel lb_ngaySinh = new JLabel(InforController.getInstance().ngaySinh());
 		lb_ngaySinh.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
-		lb_ngaySinh.setBounds(800, 150,400, 29);
+		lb_ngaySinh.setBounds(800, 150, 400, 29);
 		add(lb_ngaySinh);
 		lb_ngaySinh.setHorizontalAlignment(JLabel.RIGHT);
 	}
@@ -101,9 +99,9 @@ public class InforView extends JPanel {
 		lblNewLabel_1_2.setBounds(400, 200, 139, 29);
 		add(lblNewLabel_1_2);
 
-		JLabel lb_sdt = new JLabel(InforController.sdt());
+		JLabel lb_sdt = new JLabel(InforController.getInstance().sdt());
 		lb_sdt.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
-		lb_sdt.setBounds(800, 200,400, 29);
+		lb_sdt.setBounds(800, 200, 400, 29);
 		add(lb_sdt);
 		lb_sdt.setHorizontalAlignment(JLabel.RIGHT);
 	}
@@ -114,7 +112,7 @@ public class InforView extends JPanel {
 		lblNewLabel_1_4.setBounds(400, 250, 166, 29);
 		add(lblNewLabel_1_4);
 
-		JLabel lb_diaChi = new JLabel(InforController.diaChi());
+		JLabel lb_diaChi = new JLabel(InforController.getInstance().diaChi());
 		lb_diaChi.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		lb_diaChi.setBounds(800, 250, 400, 29);
 		add(lb_diaChi);
@@ -127,7 +125,7 @@ public class InforView extends JPanel {
 		lblNewLable11.setBounds(400, 300, 249, 29);
 		add(lblNewLable11);
 
-		JLabel lb_CCCD = new JLabel(InforController.CCCD());
+		JLabel lb_CCCD = new JLabel(InforController.getInstance().CCCD());
 		lb_CCCD.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		lb_CCCD.setBounds(800, 300, 400, 29);
 		add(lb_CCCD);
@@ -140,7 +138,7 @@ public class InforView extends JPanel {
 		lblNewLabel_1_3.setBounds(400, 350, 166, 29);
 		add(lblNewLabel_1_3);
 
-		JLabel lb_ngheNghiep = new JLabel(InforController.ngheNghiep());
+		JLabel lb_ngheNghiep = new JLabel(InforController.getInstance().ngheNghiep());
 		lb_ngheNghiep.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		lb_ngheNghiep.setBounds(800, 350, 400, 29);
 		add(lb_ngheNghiep);
@@ -157,6 +155,7 @@ public class InforView extends JPanel {
 			}
 		});
 		add(bt_change);
+		
 	}
 
 	public void noiCongTac() {
@@ -165,7 +164,7 @@ public class InforView extends JPanel {
 		lblNewLabel_1_5.setBounds(400, 400, 150, 29);
 		add(lblNewLabel_1_5);
 
-		JLabel lb_noiCongTac = new JLabel(InforController.noiCongTac());
+		JLabel lb_noiCongTac = new JLabel(InforController.getInstance().noiCongTac());
 		lb_noiCongTac.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		lb_noiCongTac.setBounds(800, 400, 400, 29);
 		add(lb_noiCongTac);
@@ -178,7 +177,7 @@ public class InforView extends JPanel {
 		lblNewLabel_1_5.setBounds(400, 450, 150, 29);
 		add(lblNewLabel_1_5);
 
-		JLabel lb_nhomMau = new JLabel(InforController.nhomMau());
+		JLabel lb_nhomMau = new JLabel(InforController.getInstance().nhomMau());
 		lb_nhomMau.setFont(new Font("#9Slide01 Noi dung ngan", Font.PLAIN, 18));
 		lb_nhomMau.setBounds(800, 450, 400, 29);
 		add(lb_nhomMau);

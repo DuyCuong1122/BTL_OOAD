@@ -4,84 +4,93 @@ import user.homepage_user.HomepageController;
 
 public class InforController {
     private static InforController instance;
-    private static InforModel infoModel =InforModel.getInstanceModel();;
+    private static InforModel infoModel;
 
     InforController() {
+        infoModel = InforModel.getInstanceModel();
     }
 
     public static InforController getInstance() {
         if (instance == null) {
             instance = new InforController();
+
         }
         return instance;
     }
 
-    public static String name() {
+    public String name() {
         return infoModel.getTen();
     }
 
-    public static String ngaySinh() {
+    public String ngaySinh() {
         return infoModel.getNgaySinh();
     }
 
-    public static String sdt() {
+    public String sdt() {
         return infoModel.getSdt();
     }
 
-    public static String diaChi() {
+    public String diaChi() {
         return infoModel.getDiachiThuongtru();
     }
 
-    public static String CCCD() {
+    public String CCCD() {
         return infoModel.getCccd();
     }
 
-    public static String ngheNghiep() {
+    public String ngheNghiep() {
         return infoModel.getNgheNghiep();
     }
 
-    public static String noiCongTac() {
+    public String noiCongTac() {
         return infoModel.getNoiCongtac();
     }
 
-    public static String nhomMau() {
+    public String nhomMau() {
         return infoModel.getNhomMau();
     }
 
-    public static void set_Ten(String ten) {
+    public void set_Ten(String ten) {
         infoModel.setTen(ten);
     }
 
-    public static void set_sdt(String sdt) {
+    public void set_sdt(String sdt) {
         infoModel.setSdt(sdt);
     }
 
-    public static void set_ngaySinh(String ngaySinh) {
+    public void set_ngaySinh(String ngaySinh) {
         infoModel.setNgaySinh(ngaySinh);
     }
 
-    public static void set_nhomMau(String nhomMaur) {
+    public void set_nhomMau(String nhomMaur) {
         infoModel.setNhomMau(nhomMaur);
     }
 
-    public static void set_diaChi(String diaChi) {
+    public void set_diaChi(String diaChi) {
         infoModel.setDiachiThuongtru(diaChi);
     }
 
-    public static void set_CCCD(String CCCD) {
+    public void set_CCCD(String CCCD) {
         infoModel.setCccd(CCCD);
     }
 
-    public static void set_ngheNghiep(String ngheNghiep) {
+    public void set_ngheNghiep(String ngheNghiep) {
         infoModel.setNgheNghiep(ngheNghiep);
     }
 
-    public static void set_noiCongTac(String noiCongTac) {
+    public void set_noiCongTac(String noiCongTac) {
         infoModel.setNoiCongtac(noiCongTac);
     }
 
     public void showChangeInfo() {
-        
+        System.out.println(InforController.getInstance().name());
+		System.out.println(InforController.getInstance().sdt());
+		System.out.println(InforController.getInstance().ngaySinh());
+		System.out.println(InforController.getInstance().nhomMau());
+		System.out.println(InforController.getInstance().diaChi());
+		System.out.println(InforController.getInstance().CCCD());
+		System.out.println(InforController.getInstance().ngheNghiep());
+		System.out.println(InforController.getInstance().noiCongTac());
         HomepageController.getInstance().showChangeInfoPage();
         System.out.println("Data from Model: Change Infomation ");
     }

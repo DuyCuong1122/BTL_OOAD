@@ -1,6 +1,6 @@
 package user.Infomation;
 
-public class InforModel {
+public class InforModel  {
     private static InforModel instance;
     private String ID;
     private String ten;
@@ -13,15 +13,15 @@ public class InforModel {
     private String nhomMau;
 
     InforModel() {
-        ID = "123456789";
-        ten = "Nguyễn Văn 9";
-        ngaySinh = "01/01/2000";
-        sdt = "0123456789";
-        diachiThuongtru = "123 Nguyễn Văn A, P.1, Q.1, TP.HCM";
-        cccd = "123456789";
-        ngheNghiep = "Sinh viên";
-        noiCongtac = "Đại học Khoa học Tự nhiên";
-        nhomMau = "A";
+        // ID = "123456789";
+        // ten = "Nguyễn Văn 9";
+        // ngaySinh = "01/01/2000";
+        // sdt = "0123456789";
+        // diachiThuongtru = "123 Nguyễn Văn A, P.1, Q.1, TP.HCM";
+        // cccd = "123456789";
+        // ngheNghiep = "Sinh viên";
+        // noiCongtac = "Đại học Khoa học Tự nhiên";
+        // nhomMau = "A";
     }
 
     public static InforModel getInstanceModel() {

@@ -26,8 +26,8 @@ public class Event_joinView extends JPanel {
                 HomepageController.getInstance().showHomepage();
             }
         });
-       add(bt_return);
-       
+        add(bt_return);
+        
         buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
 
         // Lấy chiều ngang của màn hình

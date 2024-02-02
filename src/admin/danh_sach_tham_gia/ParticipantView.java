@@ -3,6 +3,8 @@ package admin.danh_sach_tham_gia;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import admin.homepage_admin.HomepageController;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -21,9 +23,11 @@ public class ParticipantView extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				// Xử lý sự kiện khi nút "Quay lại" được nhấn
 				System.out.println("Button 'Return' clicked");
-				// HomepageController.getInstance().showHomepage();
+				HomepageController.getInstance().showEventJoinPage();
 			}
 		});
+
+		add(bt_return);
 
 		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
 

@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 import admin.add_event.Add_eventView;
+import admin.danh_sach_tham_gia.ParticipantView;
 import admin.event.EventView;
 import admin.event_join.Event_joinView;
 import admin.helpPage.HelpView;
@@ -23,6 +24,7 @@ public class HomepageController {
     private Add_eventView add_eventView;
     private Info_eventView info_eventView;
     private Event_joinView event_joinView;
+    private ParticipantView participantView;
 
     private HomepageController() {
         homePageModel = new HomepageModel();
@@ -36,6 +38,7 @@ public class HomepageController {
         add_eventView = new Add_eventView();
         info_eventView = new Info_eventView();
         event_joinView = new Event_joinView();
+        participantView = new ParticipantView();
         rootFrame.add(homePageView);
     }
 
@@ -98,7 +101,7 @@ public class HomepageController {
 
     public void showParticipantPage() {
         rootFrame.getContentPane().removeAll();
-        rootFrame.add(event_joinView);
+        rootFrame.add(participantView);
         System.out.println("Data from Model: " + " Participant page");
         rootFrame.revalidate();
         rootFrame.repaint();
